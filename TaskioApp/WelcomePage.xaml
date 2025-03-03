@@ -3,7 +3,7 @@
              x:Class="TaskioApp.WelcomePage">
     <Grid>
         <!-- Background Image -->
-        <Image Source="put the emu" Aspect="AspectFill"/>
+        <Image Source="background.jpg" Aspect="AspectFill"/>
 
         <!-- Content Overlay -->
         <StackLayout VerticalOptions="Center" Padding="30" Spacing="20">
@@ -13,6 +13,7 @@
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
                    TextColor="#B069AB"/>
+            <!-- Purple -->
 
             <!-- Description -->
             <Label Text="Welcome to our to-do list! With its minimalist yet adorable design, 
@@ -24,7 +25,7 @@
 
             <!-- Start Button -->
             <Button Text="Start Now!" 
-                    BackgroundColor="#F3D265" 
+                    BackgroundColor="#F3D265" <!-- Yellow -->
                 TextColor="Black"
                     FontSize="18"
                     CornerRadius="25"
