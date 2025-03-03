@@ -1,6 +1,4 @@
-﻿using Microsoft.Maui.Controls;
-
-namespace TaskioApp.Views
+﻿namespace TaskioApp
 {
     public partial class LoginPage : ContentPage
     {

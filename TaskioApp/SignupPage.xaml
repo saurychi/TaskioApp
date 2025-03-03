@@ -121,7 +121,8 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Grid.Row="7"
-                Grid.Column="2"/>
+                Grid.Column="2"
+                Clicked="OnStartClicked"/>
 
 
             <!--
