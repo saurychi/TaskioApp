@@ -63,13 +63,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<MauiXaml Update="SignupPage.xaml">
+		<MauiXaml Update="Views\SignupPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
-		<MauiXaml Update="LoginPage.xaml">
+		<MauiXaml Update="Views\LoginPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 	</ItemGroup>

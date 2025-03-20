@@ -42,4 +42,9 @@
     <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
+    
+    <!-- Custom colors -->
+    <Color x:Key="CustomPink">#D78FD2</Color>
+    <Color x:Key="CustomDarkPink">#B069AB</Color>
+    <Color x:Key="CustomYellow">#F5D469</Color>
 </ResourceDictionary>

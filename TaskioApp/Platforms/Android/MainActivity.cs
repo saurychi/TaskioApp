@@ -16,5 +16,7 @@ public class MainActivity : MauiAppCompatActivity
 
         Window.SetFlags(WindowManagerFlags.LayoutNoLimits, WindowManagerFlags.LayoutNoLimits);
         Window.SetStatusBarColor(Android.Graphics.Color.Transparent);
+
+        Window.SetStatusBarColor(Android.Graphics.Color.Transparent);
     }
 }

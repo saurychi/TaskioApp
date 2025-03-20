@@ -5,21 +5,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TaskioApp"
     Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
     Title="TaskioApp">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="View.MainPage" />
     
     <ShellContent
         Title="SignUp"
         ContentTemplate="{DataTemplate local:SignupPage}"
-        Route="SignupPage"/>
+        Route="View.SignupPage"/>
 
     <ShellContent
         Title="Login"
         ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="LoginPage"/>
+        Route="View.LoginPage"/>
 
 </Shell>

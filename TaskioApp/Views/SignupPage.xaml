@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskioApp.SignupPage"
+             Title="SignupPage"
+             BackgroundImageSource="signup_page.jpg">
+    <Grid RowDefinitions="270, 80, 80, 80, 80, 20, 120, 80, *"
+          ColumnDefinitions=".20*, .20*, .20*, .20*, .20*">
+
+        <Border Grid.RowSpan="9"
+            Grid.ColumnSpan="5"
+            StrokeThickness="0">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#00FFFFFF" Offset="0.0"/>
+                    <GradientStop Color="#80808080" Offset="0.8"/>
+                    <GradientStop Color="#F1CEE1" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Label 
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="5"
+            Style="{StaticResource TaskioTitle}">
+            TASKIO
+        </Label>
+
+        <!--Email-->
+        <Frame Style="{StaticResource AuthFrame}"
+               Grid.Row="1"
+               Grid.ColumnSpan="5">
+
+            <Entry Placeholder="Email"
+                   Style="{StaticResource AuthEntry}"/>  
+        </Frame>
+
+        <!--Username-->
+        <Frame Style="{StaticResource AuthFrame}"
+               Grid.Row="2"
+               Grid.ColumnSpan="5">
+
+            <Entry Placeholder="Username"
+                   Style="{StaticResource AuthEntry}"/>
+        </Frame>
+
+        <!--Password-->
+        <Frame Style="{StaticResource AuthFrame}"
+               Grid.Row="3"
+               Grid.ColumnSpan="5">
+
+            <Entry Placeholder="Password"
+                   Style="{StaticResource AuthEntry}"/>
+        </Frame>
+
+        <!--Re-enter Password-->
+        <Frame Style="{StaticResource AuthFrame}"
+               Grid.Row="4"
+               Grid.ColumnSpan="5">
+
+            <Entry Placeholder="Re-enter Password"
+                   Style="{StaticResource AuthEntry}"/>
+        </Frame>
+
+        <!--social media icons-->
+        <Label Text="Or connect with..."
+               FontSize="14"
+               TextColor="White"
+               HorizontalOptions="Center"
+               Grid.Row="5"
+               Grid.ColumnSpan="5"/>
+
+        <Image Source="facebook_icon.png" 
+               WidthRequest="40" 
+               HeightRequest="40" 
+               Grid.Row="6"
+               Grid.Column="1"/>
+        <Image Source="google_icon.png" 
+               WidthRequest="40" 
+               HeightRequest="40"
+               Grid.Row="6"
+               Grid.Column="2"/>
+        <Image Source="x_icon.png" 
+               WidthRequest="40" 
+               HeightRequest="40"
+               Grid.Row="6"
+               Grid.Column="3"/>
+
+        <Button Text="Sign In"
+                Style="{StaticResource YellowButton}"
+                Grid.Row="7"
+                Grid.Column="2"
+                Clicked="OnStartClicked"/>
+        
+
+        <!--
+            <Button Grid.Row="0" Grid.Column="0" BackgroundColor="Red"/>
+            <Button Grid.Row="1" Grid.Column="1" BackgroundColor="Yellow"/>
+            <Button Grid.Row="2" Grid.Column="2" BackgroundColor="Green"/>
+            <Button Grid.Row="3" Grid.Column="3" BackgroundColor="Orange"/>
+            <Button Grid.Row="4" Grid.Column="4" BackgroundColor="Pink"/>
+            <Button Grid.Row="5" Grid.Column="4" BackgroundColor="brown"/>
+            <Button Grid.Row="6" Grid.Column="4" BackgroundColor="blue"/>
+            <Button Grid.Row="7" Grid.Column="4" BackgroundColor="Violet"/>
+        -->
+        
+    </Grid>
+        
+    
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskioApp.MainPage"
+             BackgroundImageSource="welcome_page_bg.jpg">
+
+    <Grid RowDefinitions="90, 100, 370, 150, 100, *">
+
+        <Label 
+            Grid.Row="1"
+            Style="{StaticResource TaskioTitle}">
+            TASKIO
+        </Label>
+
+        <Label 
+            FontSize="15"
+            FontFamily="Poppins"
+            Grid.Row="3"
+            Margin="30, 5"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Welcome to our to-do list! With its minimalist yet adorable design, it provides just the right amount of visual charm to keep you motivated and on track-because getting things done should feel as delightful as it is productive!">
+
+        </Label>
+
+        <Button Text="Sign In"
+            Style="{StaticResource YellowButton}"
+            Grid.Row="4"
+            Clicked="OnStartClicked"/>
+
+
+        <!--
+        <Button Grid.Row="0" Grid.Column="0" BackgroundColor="Red"/>
+        <Button Grid.Row="1" Grid.Column="1" BackgroundColor="Yellow"/>
+        <Button Grid.Row="2" Grid.Column="2" BackgroundColor="Green"/>
+        <Button Grid.Row="3" Grid.Column="3" BackgroundColor="Orange"/>
+        <Button Grid.Row="4" Grid.Column="4" BackgroundColor="Pink"/>
+        <Button Grid.Row="5" Grid.Column="4" BackgroundColor="brown"/>
+    -->
+        
+    </Grid>
+
+</ContentPage>
