@@ -1,4 +1,4 @@
-﻿namespace TaskioApp
+﻿namespace TaskioApp.Views
 {
     public partial class MainPage : ContentPage
     {
@@ -10,8 +10,17 @@
 
         private async void OnStartClicked(object sender, EventArgs e)
         {
-            // Navigate to MainPage (or another page)
-            await Navigation.PushAsync(new SignupPage());
+            await Navigation.PushAsync(new AddTaskPage());
+        }
+        
+        private async void OnProfileClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfilePage());
+        }
+
+        private async void OnItemTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TaskItemPage());
         }
     }
 

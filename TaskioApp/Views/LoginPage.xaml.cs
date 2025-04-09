@@ -1,4 +1,4 @@
-﻿namespace TaskioApp
+﻿namespace TaskioApp.Views
 {
     public partial class LoginPage : ContentPage
     {
@@ -7,9 +7,14 @@
             InitializeComponent();
         }
 
-        private async void OnLoginClicked(object sender, EventArgs e)
+        private async void ToIndexClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Login", "Login button clicked!", "OK");
+            await Navigation.PushAsync(new MainPage());
+        }
+
+        private async void ToSignUpClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignupPage());
         }
     }
 }

@@ -1,43 +1,113 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TaskioApp.MainPage"
-             BackgroundImageSource="welcome_page_bg.jpg">
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+           xmlns:models="clr-namespace:TaskioApp.Models"
+           x:Class="TaskioApp.Views.MainPage"  
+           BackgroundColor="#F1CEE1">  
 
-    <Grid RowDefinitions="90, 100, 370, 150, 100, *">
+      <Grid RowDefinitions="60, 50, *, 20">  
 
-        <Label 
-            Grid.Row="1"
-            Style="{StaticResource TaskioTitle}">
-            TASKIO
-        </Label>
+          <Grid Grid.Row="1"  
+                ColumnDefinitions="30, 110, 140, 110,30">  
 
-        <Label 
-            FontSize="15"
-            FontFamily="Poppins"
-            Grid.Row="3"
-            Margin="30, 5"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Text="Welcome to our to-do list! With its minimalist yet adorable design, it provides just the right amount of visual charm to keep you motivated and on track-because getting things done should feel as delightful as it is productive!">
+              <Label Text="TASKIO"  
+                     Grid.Column="1"  
+                     HorizontalOptions="Center"  
+                     VerticalOptions="Center"  
+                     FontSize="20"  
+                     FontFamily="Poppins"  
+                     FontAttributes="Bold"  
+                     TextColor="#D78FD2"/>  
 
-        </Label>
+                <Button 
+                    Text="hello, user!"
+                    Grid.Column="3"
+                    BackgroundColor="Transparent"
+                    TextColor="#E9839C"  
+                    FontFamily="Poppins"  
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    Clicked="OnProfileClicked"/>
 
-        <Button Text="Sign In"
-            Style="{StaticResource YellowButton}"
-            Grid.Row="4"
-            Clicked="OnStartClicked"/>
+        </Grid>  
 
+          <!--Task List-->  
+          <Frame BackgroundColor="White"  
+                 BorderColor="Transparent"  
+                 HasShadow="True"  
+                 CornerRadius="10"  
+                 Grid.Row="2"  
+                 Margin="20, 20">  
+              <Frame.Shadow>  
+                  <Shadow Brush="Black"  
+                          Offset="4,4"  
+                          Radius="10"  
+                          Opacity="0.5" />  
+              </Frame.Shadow>
 
-        <!--
-        <Button Grid.Row="0" Grid.Column="0" BackgroundColor="Red"/>
-        <Button Grid.Row="1" Grid.Column="1" BackgroundColor="Yellow"/>
-        <Button Grid.Row="2" Grid.Column="2" BackgroundColor="Green"/>
-        <Button Grid.Row="3" Grid.Column="3" BackgroundColor="Orange"/>
-        <Button Grid.Row="4" Grid.Column="4" BackgroundColor="Pink"/>
-        <Button Grid.Row="5" Grid.Column="4" BackgroundColor="brown"/>
-    -->
-        
-    </Grid>
+                <Grid RowDefinitions="60, *">
+                    <Grid Grid.Row="0"
+                          ColumnDefinitions="20, 130, 90, *"
+                          Margin="0, 5">
+                        <Label 
+                            Text="Tasks Today"
+                            Grid.Column="1"
+                            FontFamily="Poppins"
+                            FontSize="20"
+                            VerticalOptions="Center"
+                            FontAttributes="Bold"
+                            TextColor="#D78FD2"/>
+                        <Button 
+                            Text="Add"
+                            Grid.Column="3"
+                            BackgroundColor="#D78FD2"
+                            Margin="2"
+                            Clicked="OnStartClicked"/>
+                    </Grid>
+                
+
+                    <CollectionView Grid.Row="1">  
+                        <CollectionView.ItemsSource>  
+                            <x:Array Type="{x:Type x:String}">  
+                                <x:String>Clean Room</x:String>  
+                                <x:String>Do Laundry</x:String>  
+                                <x:String>Wash Dishes</x:String>  
+                                <x:String>Study Exams</x:String>  
+                                <x:String>Code Project</x:String>  
+                            </x:Array>  
+                        </CollectionView.ItemsSource>  
+
+                        <CollectionView.ItemTemplate>  
+                            <DataTemplate>  
+                                <Frame  
+                                    Padding="8"  
+                                    Margin="5, 6"  
+                                    CornerRadius="0"  
+                                    BackgroundColor="#E9839C"  
+                                    BorderColor="Transparent">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnItemTapped" />
+                                </Frame.GestureRecognizers>
+                                    
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <CheckBox  
+                                            x:Name="exampleCheckBox"  
+                                            Color="White"  
+                                            HorizontalOptions="Start"  
+                                            Scale="1.5" />  
+                                        <Label  
+                                            Text="{Binding .}"  
+                                            FontSize="15"  
+                                            TextColor="White"  
+                                            VerticalOptions="Center" />  
+                                    </StackLayout>  
+                                </Frame>  
+                            </DataTemplate>  
+                        </CollectionView.ItemTemplate>  
+                    </CollectionView>  
+              </Grid>  
+          </Frame>  
+
+      </Grid>  
 
 </ContentPage>

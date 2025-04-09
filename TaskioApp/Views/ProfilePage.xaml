@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskioApp.Views.ProfilePage"
+             Title="ProfilePage"
+             BackgroundColor="#F1CEE1">
+    <Grid RowDefinitions="60, 50, 50, 520, *">
+
+        <Grid Grid.Row="1"  
+          ColumnDefinitions="30, 110, 140, 110,30">
+
+            <Label Text="TASKIO"  
+               Grid.Column="1"  
+               HorizontalOptions="Center"  
+               VerticalOptions="Center"  
+               FontSize="20"  
+               FontFamily="Poppins"  
+               FontAttributes="Bold"  
+               TextColor="#D78FD2"/>
+        </Grid>
+
+        <!--Profile-->
+        <Frame BackgroundColor="#E9839C"  
+           BorderColor="Transparent"  
+           HasShadow="True"  
+           CornerRadius="10"  
+           Grid.Row="3"  
+           Margin="20, 20">
+            <Frame.Shadow>
+                <Shadow Brush="Black"  
+                    Offset="4,4"  
+                    Radius="10"  
+                    Opacity="0.5" />
+            </Frame.Shadow>
+
+            <Grid RowDefinitions="60, 10, 80, 30, 70, 70, 70"
+                    Margin="0, 5">
+                <Label 
+                        Text="Profile"
+                        HorizontalOptions="Center"
+                        FontFamily="PoppinsBold"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                <Label 
+                        Text="User1"
+                        Grid.Row="2"
+                        Margin="5, 10"
+                        FontSize="20"
+                        FontFamily="Poppins"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        TextColor="White"/>
+
+                <Button
+                        Grid.Row="4"
+                        CornerRadius="50"
+                        Margin="5, 10"
+                        Text="Change Profile"
+                        TextColor="Black"
+                        BackgroundColor="#F3D265"
+                        Clicked="ToChangeClicked"/>
+
+                <Button
+                        Grid.Row="5"
+                        CornerRadius="50"
+                        Margin="5, 10"
+                        Text="Logout"
+                        TextColor="White"
+                        BackgroundColor="#E03838"
+                        Clicked="ToLoginClicked"/>
+
+                <Button
+                        Grid.Row="6"
+                        CornerRadius="50"
+                        Margin="5, 10"
+                        Text="Go Back"
+                        TextColor="White"
+                        BackgroundColor="#565353"
+                        Clicked="ToBackClicked"/>
+
+
+                <!--<Button Grid.Row="3" Grid.Column="2" BackgroundColor="Green"/>
+                <Button Grid.Row="4" Grid.Column="3" BackgroundColor="Orange"/>
+                <Button Grid.Row="5" Grid.Column="4" BackgroundColor="Blue"/>
+                <Button Grid.Row="6" Grid.Column="4" BackgroundColor="Red"/>
+                <Button Grid.Row="7" Grid.Column="4" BackgroundColor="Yellow"/>-->
+
+
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>

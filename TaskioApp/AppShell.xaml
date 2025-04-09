@@ -3,7 +3,7 @@
     x:Class="TaskioApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:TaskioApp"
+    xmlns:local="clr-namespace:TaskioApp.Views"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False"
     Title="TaskioApp">
@@ -11,16 +11,43 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="View.MainPage" />
+        Route="Views.MainPage" />
+
+    <ShellContent
+        Title="Welcome"
+        ContentTemplate="{DataTemplate local:WelcomePage}"
+        Route="Views.WelcomePage" />
     
     <ShellContent
         Title="SignUp"
         ContentTemplate="{DataTemplate local:SignupPage}"
-        Route="View.SignupPage"/>
+        Route="Views.SignupPage"/>
 
     <ShellContent
         Title="Login"
         ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="View.LoginPage"/>
+        Route="Views.LoginPage"/>
+
+    <ShellContent
+        Title="AddTask"
+        ContentTemplate="{DataTemplate local:AddTaskPage}"
+        Route="Views.AddTaskPage" />
+
+    <ShellContent
+        Title="Profile"
+        ContentTemplate="{DataTemplate local:ProfilePage}"
+        Route="Views.ProfilePage" />
+
+    <ShellContent
+        Title="ChangeProfile"
+        ContentTemplate="{DataTemplate local:ChangeProfilePage}"
+        Route="Views.ChangeProfilePage" />
+
+    <ShellContent
+        Title="TaskItem"
+        ContentTemplate="{DataTemplate local:TaskItemPage}"
+        Route="Views.TaskItemPage" />
+
+
 
 </Shell>

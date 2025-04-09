@@ -1,4 +1,4 @@
-namespace TaskioApp;
+namespace TaskioApp.Views;
 
 public partial class SignupPage : ContentPage
 {
